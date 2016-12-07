@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul id="honks">
+      <% @honks.each do |honk| %>
+      <li>
+        Honk: <%= honk.message %>
+        Posted at: <%= honk.posted_at %>
+      </li>
+      <% end %>
+    </ul>
+  </body>
+</html>

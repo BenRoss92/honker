@@ -1,4 +1,6 @@
 require 'capybara/rspec'
+require './app/app'
+Capybara.app = Honker
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
