@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Honks Feed</title>
   </head>
   <body>
+    <h1>Live Honks</h1>
     <ul id="honks">
       <% @honks.each do |honk| %>
       <li>
-        Honk: <%= honk.message %>
+        Honk: <%= honk.message.upcase %>
         Posted at: <%= honk.posted_at %>
       </li>
       <% end %>

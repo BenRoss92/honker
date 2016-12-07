@@ -10,6 +10,6 @@ class Honk
 end
 
 # DataMapper::Logger.new($stdout, :debug)
-DataMapper.setup(:default, 'postgres://localhost/honk_test')
+DataMapper.setup(:default, 'postgres://localhost/honker_test')
 DataMapper.finalize
 DataMapper.auto_upgrade!

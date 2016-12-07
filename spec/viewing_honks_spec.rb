@@ -1,4 +1,4 @@
-feature 'Viewing links' do
+feature 'Viewing honks' do
   scenario 'I can see existing honks on the honks page' do
     Honk.create(message:"HI, I'M AMAZING!", posted_at: Time.new(2016,11,29,13,20))
     visit('/honks')
