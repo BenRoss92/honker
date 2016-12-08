@@ -4,6 +4,10 @@ require_relative 'models/honk'
 
 class Honker < Sinatra::Base
 
+  get '/' do
+    redirect('/honks')
+  end
+
   get '/honks' do
     @honks = Honk.all
     erb :'honks/index'
