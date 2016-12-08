@@ -5,6 +5,7 @@ ruby "2.3.0"
 gem "sinatra"
 gem "dm-postgres-adapter"
 gem "data_mapper"
+gem "pg"
 
 group :test do
   gem "database_cleaner"
