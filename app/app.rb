@@ -21,7 +21,10 @@ class Honker < Sinatra::Base
   end
 
   post '/honks' do
-    Honk.new(message: params[:message], posted_at: Time.new)
+    user = User.first(username: session[:username])
+    honk = Honk.new(message: params[:message], posted_at: Time.now,
+    user_id: user.id)
+    honk.save
     redirect('/honks')
   end
 

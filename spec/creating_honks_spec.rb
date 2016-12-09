@@ -1,5 +1,13 @@
 feature 'Creating honks' do
   scenario 'I can create a honk by filling in a form' do
+    visit('/honks')
+    click_link('Sign Up')
+    fill_in('name', with: "Ben")
+    fill_in('username', with: "BenRoss92")
+    fill_in('email', with: "ben@123.com")
+    fill_in('password', with: "password")
+    fill_in('password_confirmation', with: "password")
+    click_button('Sign Up')
     visit('/honks/new')
     fill_in('message', with: "Just made toast. Stay Tuned.")
     click_button('Honk!')
