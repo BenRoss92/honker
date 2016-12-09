@@ -5,5 +5,5 @@ class Honk
   property :message, Text
   property :posted_at, Time
 
-  belongs_to :user
+  belongs_to :user, :required => false
 end
