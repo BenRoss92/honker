@@ -1,6 +1,6 @@
 ENV['RACK_ENV'] ||= "development"
 require 'sinatra/base'
-require_relative 'models/honk'
+require_relative 'data_mapper_setup'
 
 class Honker < Sinatra::Base
 
@@ -18,7 +18,15 @@ class Honker < Sinatra::Base
   end
 
   post '/honks' do
-    Honk.create(message: params[:message], posted_at: Time.new)
+    Honk.new(message: params[:message], posted_at: Time.new)
+    redirect('/honks')
+  end
+
+  get '/users/sign_up' do
+    erb :'users/sign_up'
+  end
+
+  post '/users' do
     redirect('/honks')
   end
 
