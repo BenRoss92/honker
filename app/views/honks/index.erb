@@ -11,7 +11,7 @@
     <ul id="honks">
       <% @honks.each do |honk| %>
       <li>
-        <p>Honk: <%= honk.message.upcase %><br>
+        <p>@<%= honk.user.username %>: <%= honk.message.upcase %><br>
           Posted at: <%= honk.posted_at %></p>
       </li>
       <% end %>

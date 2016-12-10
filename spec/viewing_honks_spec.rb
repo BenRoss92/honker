@@ -12,7 +12,7 @@ feature 'Viewing honks' do
     fill_in('message', with: "Just made toast. Stay Tuned.")
     click_button('Honk!')
     within("ul#honks") do
-      expect(page).to have_content("JUST MADE TOAST. STAY TUNED.")
+      expect(page).to have_content("@BenRoss92: JUST MADE TOAST. STAY TUNED.")
     end
   end
 end
