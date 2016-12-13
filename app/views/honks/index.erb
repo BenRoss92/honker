@@ -5,8 +5,8 @@
     <title>Honks Feed</title>
   </head>
   <body>
-    <% if @current_user %>
-    <h2>Welcome <%= @current_user.name %>!</h2>
+    <% if current_user %>
+    <h2>Welcome <%= current_user.name %>!</h2>
     <% else %>
     <h2>Welcome to Honk!</h2>
     <% end %>
