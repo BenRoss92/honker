@@ -11,7 +11,7 @@ class Honker < Sinatra::Base
   end
 
   get '/honks' do
-    @username = session[:username]
+    @current_user = User.get(session[:user_id])
     @honks = Honk.all
     erb :'honks/index'
   end
@@ -21,7 +21,7 @@ class Honker < Sinatra::Base
   end
 
   post '/honks' do
-    user = User.first(username: session[:username])
+    user = User.first(id: session[:user_id])
     honk = Honk.new(message: params[:message], posted_at: Time.now,
     user_id: user.id)
     honk.save
@@ -36,7 +36,7 @@ class Honker < Sinatra::Base
     user = User.create(name: params[:name], username: params[:username],
      email: params[:email], password: params[:password],
      password_confirmation: params[:password_confirmation])
-    session[:username] = user.username
+     session[:user_id] = user.id
     redirect('/honks')
   end
 

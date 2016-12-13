@@ -10,7 +10,7 @@ feature 'Signing up' do
     fill_in('password_confirmation', with: "password")
     click_button('Sign Up')
     expect(current_path).to eq('/honks')
-    expect(page).to have_content('Welcome @BenRoss92')
+    expect(page).to have_content('Welcome Ben!')
   end
 
   scenario 'A generic welcome message is shown to user not signed up' do
