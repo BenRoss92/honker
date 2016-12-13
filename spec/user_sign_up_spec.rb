@@ -12,4 +12,10 @@ feature 'Signing up' do
     expect(current_path).to eq('/honks')
     expect(page).to have_content('Welcome @BenRoss92')
   end
+
+  scenario 'A generic welcome message is shown to user not signed up' do
+    visit('/honks')
+    expect(page).to have_content('Welcome to Honk!')
+  end
+
 end

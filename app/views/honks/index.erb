@@ -5,7 +5,11 @@
     <title>Honks Feed</title>
   </head>
   <body>
+    <% if @username %>
     <h2>Welcome @<%= @username %></h2>
+    <% else %>
+    <h2>Welcome to Honk!</h2>
+    <% end %>
     <a href="/users/sign_up">Sign Up</a>
     <h1>Live Honks</h1>
     <ul id="honks">
