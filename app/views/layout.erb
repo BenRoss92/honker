@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Honker</title>
+  </head>
+  <body>
+    <% if current_user %>
+    <h2>Welcome <%= current_user.name %>!</h2>
+    <% else %>
+    <h2>Welcome to Honk!</h2>
+    <% end %>
+    <a href="/users/sign_up">Sign Up</a>
+    <%= yield %>
+  </body>
+</html>
