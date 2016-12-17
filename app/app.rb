@@ -11,7 +11,6 @@ class Honker < Sinatra::Base
   end
 
   get '/honks' do
-    # @current_user ||= User.get(session[:user_id])
     @honks = Honk.all
     erb :'honks/index'
   end
