@@ -8,7 +8,8 @@ feature 'Signing up' do
     fill_in('email', with: "ben@123.com")
     fill_in('password', with: "password")
     fill_in('password_confirmation', with: "password")
-    click_button('Sign Up')
+    expect{click_button('Sign Up')}.to change(User, :count).by(1)
+    expect(User.first.email).to eq('ben@123.com')
     expect(current_path).to eq('/honks')
     expect(page).to have_content('Welcome Ben!')
   end
@@ -18,7 +19,7 @@ feature 'Signing up' do
     expect(page).to have_content('Welcome to Honk!')
   end
 
-  scenario "An error is displayed when passwords don't match" do
+  scenario "A user is not created when passwords don't match" do
     visit('/honks')
     click_link('Sign Up')
     expect(current_path).to eq("/users/sign_up")
@@ -27,9 +28,7 @@ feature 'Signing up' do
     fill_in('email', with: "ben@123.com")
     fill_in('password', with: "password1")
     fill_in('password_confirmation', with: "password")
-    click_button('Sign Up')
-    expect(current_path).to eq("/users/sign_up")
-    expect(page).to have_content('Passwords do not match')
+    expect{click_button('Sign Up')}.not_to change(User, :count)
   end
 
 end
