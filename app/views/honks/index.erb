@@ -1,9 +1,20 @@
-<h1>Live Honks</h1>
-<ul id="honks">
-  <% @honks.each do |honk| %>
-  <li>
-    <p>@<%= honk.user.username %>: <%= honk.message.upcase %><br>
-      Posted at: <%= honk.posted_at %></p>
-  </li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>
+    <kbd>Live Honks</kbd>
+  </h1>
+  <div class="row">
+    <!-- Insert div with central column grid class -->
+      <div class="panel panel-default">
+        <% @honks.each do |honk| %>
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <%= honk.user.name %> (@<%= honk.user.username %>)
+          </h3>
+        </div>
+        <div class="panel-body">
+          <p><%= honk.message.upcase %></p>
+          <p><i><%= honk.posted_at.strftime("%b %e, %l:%M %p") %></i></p>
+        </div>
+        <% end %>
+    </div>
+</div>

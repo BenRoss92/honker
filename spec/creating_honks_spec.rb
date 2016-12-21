@@ -12,7 +12,7 @@ feature 'Creating honks' do
     fill_in('message', with: "Just made toast. Stay Tuned.")
     click_button('Honk!')
     expect(current_path).to eq("/honks")
-    within("ul#honks") do
+    within("div.container") do
       expect(page).to have_content("JUST MADE TOAST. STAY TUNED.")
     end
   end

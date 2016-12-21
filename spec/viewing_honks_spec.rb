@@ -11,8 +11,8 @@ feature 'Viewing honks' do
     visit('/honks/new')
     fill_in('message', with: "Just made toast. Stay Tuned.")
     click_button('Honk!')
-    within("ul#honks") do
-      expect(page).to have_content("@BenRoss92: JUST MADE TOAST. STAY TUNED.")
+    within("div.container") do
+      expect(page).to have_content("Ben (@BenRoss92) JUST MADE TOAST. STAY TUNED.")
     end
   end
 end
