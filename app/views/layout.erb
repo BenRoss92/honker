@@ -29,6 +29,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <% if current_user %>
           <p class="navbar-text">Welcome <%= current_user.name %>!</p>
+          <li><a class="navbar-text" href="/honks/new">Honk Something</a></li>
           <% else %>
           <p class="navbar-text">Welcome to Honk!</p>
           <ul class="nav navbar-nav">
