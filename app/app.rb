@@ -16,7 +16,11 @@ class Honker < Sinatra::Base
   end
 
   get '/honks/new' do
-    erb :'honks/new'
+    if current_user
+      erb :'honks/new'
+    else
+      redirect('/users/sign_up')
+    end
   end
 
   post '/honks' do
