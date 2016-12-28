@@ -8,6 +8,7 @@ gem "dm-postgres-adapter"
 gem "data_mapper"
 gem "pg"
 gem "bcrypt"
+gem "sinatra-flash"
 
 group :test do
   gem "database_cleaner"
