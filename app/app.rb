@@ -51,6 +51,21 @@ class Honker < Sinatra::Base
      end
   end
 
+  get '/users/sign_in' do
+    erb :'users/sign_in'
+  end
+
+  post '/sessions' do
+    user = User.authenticate(params[:email], params[:password])
+    if user
+      session[:user_id] = user.id
+      redirect('/honks')
+    else
+      flash.now[:error] = "Email or password incorrect"
+      erb :'users/sign_in'
+    end
+  end
+
   helpers do
     def current_user
       @current_user ||= User.get(session[:user_id])
