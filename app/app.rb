@@ -5,6 +5,7 @@ require_relative 'data_mapper_setup'
 
 class Honker < Sinatra::Base
   enable :sessions
+  use Rack::MethodOverride
   set :session_secret, 'super secret'
   register Sinatra::Flash
 
@@ -64,6 +65,13 @@ class Honker < Sinatra::Base
       flash.now[:error] = "Email or password incorrect"
       erb :'users/sign_in'
     end
+  end
+
+  delete '/sessions' do
+    session[:user_id] = nil
+    puts session[:user_id]
+    flash.keep[:notice] = "See you next time!"
+    redirect('/honks')
   end
 
   helpers do
