@@ -1,6 +1,6 @@
 # Honker
 
-*Currently under construction*
+A mini Twitter clone that allows users to 'honk' (i.e. post/shout messages in capitals) to a public stream.
 
 ## User stories
 
@@ -18,7 +18,7 @@ I want to log out of Honker
 
 >As a User  
 So that I can let people know what I am doing  
-I want to honk a message on Honker
+I want to send a honk on Honker
 
 >As a User  
 So that I can see what others are honking,  
