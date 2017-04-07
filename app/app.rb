@@ -6,7 +6,6 @@ require_relative 'data_mapper_setup'
 class Honker < Sinatra::Base
   enable :sessions
   use Rack::MethodOverride
-  set :port, 4567
   set :session_secret, 'super secret'
   register Sinatra::Flash
 
