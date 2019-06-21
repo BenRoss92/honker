@@ -2,7 +2,7 @@
 
 ## Overview
 
-Honker is a mini Twitter clone that allows users to 'honk' (i.e. post/shout messages in capitals) to a public stream.
+Honker is a mini Twitter clone that allows users to "honk" (i.e. yell arrogantly at each other) and displays their messages on a shared page.
 
 ## Instructions
 
