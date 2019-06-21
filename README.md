@@ -6,7 +6,9 @@ Honker is a mini Twitter clone that allows users to 'honk' (i.e. post/shout mess
 
 ## Instructions
 
-You can view the app online at https://honks.herokuapp.com/, or run it locally on the command line:
+You can view the app online at https://honks.herokuapp.com/.
+
+You can also run the app locally on the command line by doing the following:
 
 1. Clone and open this repository - `$ git clone git@github.com:BenRoss92/honker.git && cd honker`
 2. Install the dependencies - `$ bundle install`
