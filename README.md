@@ -22,8 +22,8 @@ postgres=# CREATE DATABASE honker_development;
 # Quit:
 postgres=# \q
 ```
-5. Run tests using `$ rspec`
-6. Run the app using `$ rackup`, then open a browser page with URL http://localhost:4567
+5. Run tests using `$ bundle exec rspec`
+6. Run the app using `$ bundle exec rackup`, then open a browser page with URL http://localhost:4567
 
 ## User stories
 
