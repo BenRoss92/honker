@@ -6,23 +6,23 @@ Honker is a mini Twitter clone that allows users to 'honk' (i.e. post/shout mess
 
 ## Instructions
 
-You can view the app online at https://honks.herokuapp.com/, or run it locally:
+You can view the app online at https://honks.herokuapp.com/, or run it locally on the command line:
 
 1. Clone and open this repository - `$ git clone git@github.com:BenRoss92/honker.git && cd honker`
-2. Install gems - `$ bundle install`
-3. Install PostgreSQL database - (instructions for Mac installation using Homebrew:) http://exponential.io/blog/2015/02/21/install-postgresql-on-mac-os-x-via-brew/
-4. Create test and development databases:
+2. Install the dependencies - `$ bundle install`
+3. Install PostgreSQL - (instructions for Mac installation using Homebrew:) http://exponential.io/blog/2015/02/21/install-postgresql-on-mac-os-x-via-brew/
+4. Create test and development PostgreSQL databases:
 ```
 # Enter PostgreSQL:
 $ psql
-# Create test database:
+# Create a test database:
 postgres=# CREATE DATABASE honker_test;
-# Create development database:
+# Create a development database:
 postgres=# CREATE DATABASE honker_development;
-# Quit:
+# Quit PostgreSQL:
 postgres=# \q
 ```
-5. Run tests using `$ rspec`
+5. Run the tests using `$ rspec`
 6. Run the app using `$ rackup`, then open a browser page with URL http://localhost:4567
 
 ## User stories
