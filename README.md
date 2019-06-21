@@ -23,7 +23,7 @@ postgres=# CREATE DATABASE honker_development;
 postgres=# \q
 ```
 5. Run tests using `$ rspec`
-6. Run the app using `$ rackup`, then open a browser page with URL http://localhost:4567
+6. Run the app using `$ rackup`, then open a browser page with URL http://localhost:9292
 
 ## User stories
 
