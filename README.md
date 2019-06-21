@@ -2,28 +2,32 @@
 
 ## Overview
 
-Honker is a mini Twitter clone that allows users to 'honk' (i.e. post/shout messages in capitals) to a public stream.
+Honker is a mini Twitter clone that allows users to "honk" (i.e. yell arrogantly at each other) and displays their messages on a shared page.
 
 ## Instructions
 
-You can view the app online at https://honks.herokuapp.com/, or run it locally:
+You can view the app online at https://honks.herokuapp.com/.
+
+You can also run the app locally on the command line by doing the following:
 
 1. Clone and open this repository - `$ git clone git@github.com:BenRoss92/honker.git && cd honker`
-2. Install gems - `$ bundle install`
-3. Install PostgreSQL database - (instructions for Mac installation using Homebrew:) http://exponential.io/blog/2015/02/21/install-postgresql-on-mac-os-x-via-brew/
-4. Create test and development databases:
+2. Install RVM (Ruby Version Manager) - https://rvm.io/rvm/install
+3. Install Bundler - `$ gem install bundler`
+4. Install the dependencies - `$ bundle install`
+5. Install PostgreSQL - https://www.postgresql.org/download/
+6. Create PostgreSQL databases for the 'test' and 'development' environments:
 ```
 # Enter PostgreSQL:
 $ psql
-# Create test database:
+# Create a test database:
 postgres=# CREATE DATABASE honker_test;
-# Create development database:
+# Create a development database:
 postgres=# CREATE DATABASE honker_development;
-# Quit:
+# Quit PostgreSQL:
 postgres=# \q
 ```
-5. Run tests using `$ bundle exec rspec`
-6. Run the app using `$ bundle exec rackup`, then open a browser page with URL http://localhost:9292
+5. Run the tests using `$ bundle exec rspec`
+6. Run the app using `$ bundle exec rackup`, then visit http://localhost:9292 in a browser
 
 ## User stories
 
