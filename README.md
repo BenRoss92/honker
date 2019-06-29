@@ -12,7 +12,7 @@ You can also run the app locally on the command line by doing the following:
 
 1. Clone and open this repository - `$ git clone git@github.com:BenRoss92/honker.git && cd honker`
 2. Install RVM (Ruby Version Manager) - https://rvm.io/rvm/install
-3. Install Bundler - `$ gem install bundler`
+3. Install Bundler version 2.0.1 (same version used for Heroku site) - `$ gem install bundler -v 2.0.1`
 4. Install the dependencies - `$ bundle install`
 5. Install PostgreSQL - https://www.postgresql.org/download/
 6. Create PostgreSQL databases for the 'test' and 'development' environments:
