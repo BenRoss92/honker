@@ -6,9 +6,7 @@ Honker is a mini Twitter clone that allows users to "honk" (i.e. yell arrogantly
 
 ## Instructions
 
-You can view the app online at https://honks.herokuapp.com/.
-
-You can also run the app locally on the command line by doing the following:
+You can run the app locally on the command line by doing the following:
 
 1. Clone and open this repository - `$ git clone git@github.com:BenRoss92/honker.git && cd honker`
 2. Install RVM (Ruby Version Manager) - https://rvm.io/rvm/install
